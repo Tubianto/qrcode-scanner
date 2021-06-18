@@ -26,7 +26,9 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.InputStream
 
-
+/**
+ * Created by Tubianto on 18/06/2021.
+ */
 class MainActivity : AppCompatActivity() {
     private lateinit var qrScan: IntentIntegrator
     private lateinit var tvResult: TextView
