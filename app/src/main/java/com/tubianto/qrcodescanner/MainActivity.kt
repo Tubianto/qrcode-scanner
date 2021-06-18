@@ -45,13 +45,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun init(){
         tvResult = findViewById(R.id.tv_result)
-
-        qrScan = IntentIntegrator(this)
-        qrScan.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
-        qrScan.setPrompt("Scan a QR Code")
-        qrScan.setOrientationLocked(false)
-        qrScan.setBeepEnabled(true)
-        qrScan.setBarcodeImageEnabled(true)
     }
 
     private fun checkPermission(){
@@ -120,6 +113,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openCamera() {
+        qrScan = IntentIntegrator(this)
+        qrScan.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
+        qrScan.setPrompt("Scan a QR Code")
+        qrScan.setOrientationLocked(false)
+        qrScan.setBeepEnabled(true)
+        qrScan.setBarcodeImageEnabled(true)
         //initiating the qr code scan
         qrScan.initiateScan()
     }
