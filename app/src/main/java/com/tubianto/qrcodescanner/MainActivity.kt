@@ -101,10 +101,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickScan(view: View) {
-        val imageUploadOptions = arrayOf<String>("Camera", "Gallery")
+        val scanOptions = arrayOf<String>("Camera", "Gallery")
         AlertDialog.Builder(this)
             .setTitle("Scan QR Code melalui")
-            .setItems(imageUploadOptions) { _, which-> when (which) {
+            .setItems(scanOptions) { _, which-> when (which) {
                 0 -> openCamera()
                 1 -> openGallery()
             } }
