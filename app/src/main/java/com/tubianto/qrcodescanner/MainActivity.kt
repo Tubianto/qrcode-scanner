@@ -200,7 +200,8 @@ class MainActivity : AppCompatActivity() {
 
             tvResult.text = contents
         } catch (e: Exception) {
-            Log.e("QrTest", "Error decoding barcode", e)
+            Log.e("QrTest", "Error decoding qr code", e)
+            Toast.makeText(this, "Error decoding QR Code, Mohon pilih gambar QR Code yang benar!", Toast.LENGTH_SHORT).show()
         }
         return contents
     }
