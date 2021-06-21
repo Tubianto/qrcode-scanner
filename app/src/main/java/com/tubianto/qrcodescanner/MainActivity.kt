@@ -30,7 +30,6 @@ import java.io.InputStream
  * Created by Tubianto on 18/06/2021.
  */
 class MainActivity : AppCompatActivity() {
-    private lateinit var qrScan: IntentIntegrator
     private lateinit var tvResult: TextView
 
     private var WRITE_EXTERNAL_STORAGE_PERMISSION_CODE: Int = 1
@@ -115,7 +114,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openCamera() {
-        qrScan = IntentIntegrator(this)
+        val qrScan = IntentIntegrator(this)
         qrScan.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
         qrScan.setPrompt("Scan a QR Code")
         qrScan.setOrientationLocked(false)
