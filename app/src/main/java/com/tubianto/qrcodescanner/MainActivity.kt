@@ -165,6 +165,8 @@ class MainActivity : AppCompatActivity() {
             val imagePath = convertMediaUriToPath(imageUri)
             val imgFile = File(imagePath)
             scanImageQRCode(imgFile)
+        } else {
+            Toast.makeText(this, "Result Not Found", Toast.LENGTH_LONG).show()
         }
     }
 
